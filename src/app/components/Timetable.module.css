@@ -1,0 +1,59 @@
+/* * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    padding: 50px
+} */
+
+.timetable {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px
+}
+
+.periodeSelect {
+    width: 100%;
+    height: 100px;
+    background: #000;
+    border-radius: 20px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    position: relative;
+    transform: none;
+    box-shadow: none;
+    transition: transform .3s, box-shadow .3s
+}
+
+
+.periodeSelect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5 5px black 
+}
+
+.selected {
+    background-color: orangered;
+}
+
+@media (500px < width < 900px) {
+    .timetable {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media (width < 499px) {
+    .timetable {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
