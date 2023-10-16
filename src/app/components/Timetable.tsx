@@ -46,7 +46,7 @@ export default function Timetable({ fishTank }: { fishTank: number }) {
                 const timeRange = getPeriod(parseInt(period.id))
                 const url = `https://la-api-de-joaquin/${fishTank}?date=${period.parentElement.id}&period=${timeRange}`
                 console.log(url)
-            })
+            })  
         })
 
     },[0])
