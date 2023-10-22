@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import styles from "../../../components/Timetable.module.css"
 
 export default function Free ({ children }: {children: string}) {
     useEffect(() => {
@@ -7,7 +8,7 @@ export default function Free ({ children }: {children: string}) {
     }, [])
 
     return (
-        <div>
+        <div className={styles.periodeSelect}>
             {children}
         </div>
     )

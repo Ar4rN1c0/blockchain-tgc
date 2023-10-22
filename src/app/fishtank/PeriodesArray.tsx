@@ -31,25 +31,19 @@ export default async function PeriodesMAtrix ( {fishtank}: {fishtank: string} ) 
             <div className={styles.cols} id={today}>          
                 <label>{today}</label>
                 {frees[0].periodes.map((period: periodType, index: number) => (
-                    <div key={period.id} className={period.isOc ? styles.periodeUnselect : styles.periodeSelect}>
-                        {period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>}
-                    </div>
-                ))}
+                        period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>
+                    ))}
             </div>
             <div className={styles.cols} id={tomorrow}>
                 <label>{tomorrow}</label>
                 {frees[1].periodes.map((period: periodType, index: number) => (
-                    <div key={period.id} className={period.isOc ? styles.periodeUnselect : styles.periodeSelect}>
-                        {period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>}
-                    </div>
+                        period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>
                     ))}
             </div>
             <div className={styles.cols} id={next}>
                 <label>{next}</label>
                 {frees[2].periodes.map((period: periodType, index: number) => (
-                    <div key={period.id} className={period.isOc ? styles.periodeUnselect : styles.periodeSelect}>
-                        {period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>}
-                    </div>
+                        period.isOc ? <Occupied></Occupied> : <Free>{getPeriod(index)}</Free>
                     ))}
             </div>
             
