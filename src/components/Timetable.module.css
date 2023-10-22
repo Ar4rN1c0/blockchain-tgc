@@ -9,6 +9,8 @@ main {
 .timetable {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    place-content: center;
     gap: 15px;
 }
 
@@ -21,7 +23,7 @@ main {
 .periodeSelect {
     width: 100%;
     height: 100px;
-    background: #000;
+    background: #135418;
     border-radius: 20px;
     cursor: pointer;
     display: grid;
@@ -29,6 +31,24 @@ main {
     align-content: center;
     color: white;
     position: relative;
+    width: 20vw;
+    transform: none;
+    box-shadow: none;
+    transition: transform .3s, box-shadow .3s
+}
+
+.periodeUnselect {
+    width: 100%;
+    height: 100px;
+    background: #541313;
+    border-radius: 20px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    position: relative;
+    width: 20vw;
     transform: none;
     box-shadow: none;
     transition: transform .3s, box-shadow .3s
@@ -36,6 +56,10 @@ main {
 
 
 .periodeSelect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5 5px black 
+}
+.periodeUnselect:hover {
     transform: translateY(-10px);
     box-shadow: 0px 5 5px black 
 }
@@ -49,11 +73,24 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     } 
+    .periodeSelect {
+        width: 40vw
+    }
+
+    .periodeUnselect {
+        width: 40vw
+    }
 }
 
 @media (width < 499px) {
     .timetable {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+    .periodeSelect {
+        width: 80vw
+    }
+    .periodeUnselect {
+        width: 80vw
     }
 }

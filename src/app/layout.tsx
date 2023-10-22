@@ -15,6 +15,10 @@ const links = [
   {
     label: 'About',
     route: '/about'
+  },
+  {
+    label: 'Fishtank Select',
+    route: 'fishtank'
   }
 ];
 
