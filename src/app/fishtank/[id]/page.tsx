@@ -1,4 +1,4 @@
-import PeriodesMatrix from "../PeriodesArray"
+import PeriodesMatrix from "../../../components/PeriodesArray"
 
 export default async function FishtankID ( {params}: {params: {id: string}} ) {
     return (

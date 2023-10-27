@@ -34,7 +34,8 @@ main {
     width: 20vw;
     transform: none;
     box-shadow: none;
-    transition: transform .3s, box-shadow .3s
+    transition: transform .3s, box-shadow .3s;
+    z-index: 0;
 }
 
 .periodeUnselect {
