@@ -8,7 +8,7 @@ body {
 }
 
 .main-section {
-    width: 100vw;
+    width: 96vw;
     height: 500px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -17,7 +17,7 @@ body {
 }
 
 .fishtank-select {
-    background-color: seagreen;
+    background-color: rgb(20, 59, 37);
     padding: 20px;
     max-width: 500px;
     min-width: 300px;
