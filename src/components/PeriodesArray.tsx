@@ -8,36 +8,43 @@ const getOcc = () => {
     return fetch("http://localhost:3001/array", {cache: 'no-store'}).then(res => res.json())
 } 
 
-const options = {method: 'GET', headers: {date: '2023-11-02'}};
 
-function fetchData () {
+function fetchData (date: string) {
+    const options = {method: 'GET', headers: {date: date}, cache: 'no-store'};
     return fetch('https://v57nr3jh-3000.uks1.devtunnels.ms/api/get/fishtank/1', options)
    .then(response => response.json())
-   .catch(err => console.error(err));
- }
+}
+
+
+interface reservaType {
+    period: string,
+    wallet: string
+}
+
 
 export default async function PeriodesMAtrix ( {fishtank}: {fishtank: string} ) {
 
-    const data = await fetchData()
-     
-    const periodos = ["1", "2", "3", "4", "5", "6", "7", "8"]
-    const periodosConEstado = periodos.map(periodo => ([{
-        period: periodo,
-        IsOcc: data.some(reserva => reserva.period === periodo),
-    }]));
-   return periodosConEstado
-   console.log(periodosConEstado)
-
-        
     const { today, tomorrow, next } = getDates();
     let dates = [today, tomorrow, next]
+    const periodos = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    const dataToday = await fetchData(today)
+    const freesToday = periodos.map(periodo => ({
+        period: periodo,
+        IsOcc: dataToday.some((reserva: reservaType) => reserva.period === periodo),
+    }));
+    const dataTomorrow = await fetchData(tomorrow)
+    const freesTomorrow = periodos.map(periodo => ({
+        period: periodo,
+        IsOcc: dataTomorrow.some((reserva: reservaType) => reserva.period === periodo),
+    }))
+    const dataNext = await fetchData(next)
+    const freesNext = periodos.map(periodo => ({
+        period: periodo,
+        IsOcc: dataNext.some((reserva: reservaType) => reserva.period === periodo),
+    }))
+    console.log(freesToday)
 
-    const frees = await getOcc();
 
-    interface periodType {
-        isOc: boolean,
-        id: number
-    }
     return (
         <section>
             <h1>
@@ -46,20 +53,20 @@ export default async function PeriodesMAtrix ( {fishtank}: {fishtank: string} ) 
             <section className={styles.timetable}>
                 <div className={styles.cols} id={today}>          
                     <label>{today}</label>
-                    {frees[0].periodes.map((period: periodType, index: number) => (
-                            period.isOc ? <Occupied key={period.id}></Occupied> : <div><Free key={period.id} fishtank={fishtank} periode={`${getPeriod(index)}`} date={`${today}`}>{`${getPeriod(index)}`}</Free></div>
+                    {freesToday.map((period, index: number) => (
+                            period.IsOcc ? <Occupied key={period.period}></Occupied> : <div><Free key={period.period} fishtank={fishtank} periode={`${index+1}`} date={`${today}`}>{`${getPeriod(index)}`}</Free></div>
                         ))}
                 </div>
                 <div className={styles.cols} id={tomorrow}>
                     <label>{tomorrow}</label>
-                    {frees[1].periodes.map((period: periodType, index: number) => (
-                            period.isOc ? <Occupied key={period.id}></Occupied> : <Free key={period.id} fishtank={fishtank}  periode={`${getPeriod(index)}`} date={`${tomorrow}`}>{`${getPeriod(index)}`}</Free>
+                    {freesTomorrow.map((period, index: number) => (
+                            period.IsOcc ? <Occupied key={period.period}></Occupied> : <Free key={period.period} fishtank={fishtank} periode={`${index+1}`} date={`${tomorrow}`}>{`${getPeriod(index)}`}</Free>
                         ))}
                 </div>
                 <div className={styles.cols} id={next}>
                     <label>{next}</label>
-                    {frees[2].periodes.map((period: periodType, index: number) => (
-                            period.isOc ? <Occupied key={period.id}></Occupied> : <Free key={period.id} fishtank={fishtank} periode={`${getPeriod(index)}`} date={`${next}`}>{`${getPeriod(index)}`}</Free>
+                    {freesNext.map((period, index: number) => (
+                            period.IsOcc ? <Occupied key={period.period}></Occupied> : <Free key={period.period} fishtank={fishtank}  periode={`${index+1}`} date={`${tomorrow}`}>{`${getPeriod(index)}`}</Free>
                         ))}
                 </div>
                 

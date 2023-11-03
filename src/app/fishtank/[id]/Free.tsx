@@ -27,7 +27,7 @@ export default function Free ({ children, periode, date, fishtank }: {children: 
                 {children}
             </div>
             <animated.div style={fade}>
-                {state && <SendComponent fishtank={fishtank} date={date} period={children}/>}
+                {state && <SendComponent fishtank={fishtank} date={date} period={periode}/>}
             </animated.div>
         </div>
     )
