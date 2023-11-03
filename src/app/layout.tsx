@@ -1,5 +1,5 @@
-import Link from "next/link"
 import "./Global.css"
+import Header from "@/components/Header"
 
 export const metadata = {
   title: 'Next.js',
@@ -7,36 +7,11 @@ export const metadata = {
 }
 
 
-const links = [
-  {
-    label: 'Home',
-    route: '/'
-  },
-  {
-    label: 'About',
-    route: '/about'
-  },
-  {
-    label: 'Fishtank Select',
-    route: 'fishtank'
-  }
-];
-
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <nav>
-            <ul>
-              {links.map(({label, route}) => (
-                <li key ={route}>
-                  <Link href={route}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+      <body style={{padding: "0", margin: "0", backgroundColor: "aliceblue"}}>
+        <Header></Header>
         <main>
           {children}
         </main>

@@ -1,0 +1,25 @@
+.home {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+}
+
+.title {
+
+}
+
+.menu {
+    display: flex;
+    background-color: #296B70;
+    width: 80vw;
+    justify-content: space-between;
+    padding: 100px 300px;
+    border-radius: 30px;
+}
+
+.link {
+    background-color: aliceblue;
+    padding: 20px;
+    
+}
