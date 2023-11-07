@@ -1,25 +1,39 @@
 .home {
-    display: grid;
-    place-items: center;
-    place-content: center;
     overflow: hidden;
+    height: 79vh;
+    padding: 0;
 }
 
 .title {
-
-}
-
-.menu {
-    display: flex;
+    height: 12vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
     background-color: #296B70;
-    width: 80vw;
-    justify-content: space-between;
-    padding: 100px 300px;
-    border-radius: 30px;
+    width: 100%;
+    margin: 0;
+}
+.section {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aliceblue;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+    height: 67vh;
+    width: 60vw;
 }
 
 .link {
-    background-color: aliceblue;
-    padding: 20px;
-    
+    background-color: #296B70;
+    padding: 100px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 20px;
 }

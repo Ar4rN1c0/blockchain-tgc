@@ -49,36 +49,36 @@ export default async function PeriodesMAtrix ( {fishtank}: {fishtank: string} ) 
     }))
 
     return (
-        <main>
+        <section>
             <h1>
                 Fishtank {fishtank}
             </h1>
-            <section className={styles.timetable}>
-                <article className={styles.cols} id={today}>          
+            <article className={styles.timetable}>
+                <section className={styles.cols} id={today}>          
                     <label>{today}</label>
                     {freesToday.map((period, index: number) => (
                             <div key={period.period}>
                                 {period.IsOcc ? <Occupied></Occupied> : <div><Free fishtank={fishtank} periode={`${index+1}`} date={`${today}`}>{`${getPeriod(index)}`}</Free></div>}
                             </div>
                         ))}
-                </article>
-                <article className={styles.cols} id={tomorrow}>
+                </section>
+                <section className={styles.cols} id={tomorrow}>
                     <label>{tomorrow}</label>
                     {freesTomorrow.map((period, index: number) => (
                             <div key={period.period}>
                                 {period.IsOcc ? <Occupied></Occupied> : <Free fishtank={fishtank} periode={`${index+1}`} date={`${tomorrow}`}>{`${getPeriod(index)}`}</Free>}
                             </div>
                         ))}
-                </article>
-                <article className={styles.cols} id={next}>
+                </section>
+                <section className={styles.cols} id={next}>
                     <label>{next}</label>
                     {freesNext.map((period, index: number) => (
-                            <div key={period.period}>
+                            <article key={period.period}>
                                 {period.IsOcc ? <Occupied></Occupied> : <Free fishtank={fishtank}  periode={`${index+1}`} date={`${next}`}>{`${getPeriod(index)}`}</Free>}
-                            </div>
+                            </article>
                         ))}
-                </article>
-            </section>
-        </main>
+                </section>
+            </article>
+        </section>
     )
 }

@@ -25,9 +25,7 @@ export default function Header () {
             <nav className={styles.nav}>
                 <ul className={styles.list}>
                     {links.map(({label, route}) => (
-                    <li className={styles.item} key ={route}>
-                        <Link className={styles.link} href={route}>{label}</Link>
-                    </li>
+                        <Link key={route} className={styles.link} href={route}>{label}</Link>
                     ))}
                 </ul>
             </nav>
