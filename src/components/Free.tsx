@@ -1,9 +1,9 @@
 "use client"
 import {  useState } from "react"
 import { useSpring, animated } from "react-spring"
-import styles from "../../../components/Timetable.module.css"
+import styles from "@/styles/Timetable.module.css"
 import SendComponent from "@/components/Send"
-import "../../../components/styles.css"
+
 
 export default function Free ({ children, periode, date, fishtank }: {children: string, periode: string, date: string, fishtank: string}) {
     const [state, toggle] = useState(false)
@@ -22,7 +22,7 @@ export default function Free ({ children, periode, date, fishtank }: {children: 
     })
 
     return (
-        <div className="container-send">
+        <div className={styles.SendComponent}>
             <div className={styles.periodeSelect} id="select-options" onClick={save}>
                 {children}
             </div>

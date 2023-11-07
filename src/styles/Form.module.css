@@ -4,11 +4,6 @@
     padding: 20px;
 }
 
-.container-send {
-    display: grid;
-    place-content: center;
-    place-items: center ;
-}
 
 .form {
     display: grid;
@@ -24,7 +19,7 @@
     cursor: pointer;
 }
 
-.text-input {
+.textInput {
     padding: 10px 0;
     text-align: center;
     background-color: #296B70;
@@ -35,13 +30,13 @@
     transition: all .2s
 }
 
-.text-input::placeholder {
+.textInput::placeholder {
     color: white;
     font-weight: 500;
     border-radius: 10px;
 }
 
-.text-input:focus {
+.textInput:focus {
     border: solid 3px #296B70;
     background-color: azure;
 }

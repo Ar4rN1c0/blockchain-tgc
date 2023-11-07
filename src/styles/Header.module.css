@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     place-items: center;
+    overflow: auto;
 }
 
 .nav {
@@ -18,9 +19,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0;
     gap: 30px;
 }
+
 
 .item {
     padding: 7px 20px;
@@ -56,5 +58,6 @@
         flex-direction: column;
     } .list {
         flex-direction: row;
+        gap: 10px
     }
 }

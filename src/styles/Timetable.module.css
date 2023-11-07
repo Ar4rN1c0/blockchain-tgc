@@ -90,3 +90,9 @@
         width: 80vw
     }
 }
+
+.containerSend {
+    display: grid;
+    place-content: center;
+    place-items: center ;
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Header.module.css"
+import styles from "@/styles/Header.module.css"
 
 export default function Header () {
     const links = [
@@ -13,7 +13,7 @@ export default function Header () {
         },
         {
           label: 'Fishtank Select',
-          route: 'fishtank'
+          route: '/fishtank'
         }
       ];
       
