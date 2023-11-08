@@ -27,7 +27,7 @@ interface reservaType {
 }
 
 
-export default async function PeriodesMAtrix ( {fishtank}: {fishtank: string} ) {
+export default async function PeriodesMatrix ( {fishtank}: {fishtank: string} ) {
 
     const { today, tomorrow, next } = getDates();
 

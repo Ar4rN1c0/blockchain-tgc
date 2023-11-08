@@ -28,7 +28,6 @@ export default function SendComponent ( {date, period, fishtank}: {date: string,
             hash: "eysdgIUA",
             name: "eawgrea"
         }
-        console.log(data)
         fetch('http://panel.jactc.xyz:3002/api/post/rsvp/', {
             method: 'POST',
             body: JSON.stringify(data) ,
