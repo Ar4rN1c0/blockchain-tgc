@@ -67,8 +67,8 @@ So this is a Blockchain project, where are the transactions made? When you send 
             date: date,
             period: period,
             fishtank: fishtank,
-            hash: "eysdgIUA",
-            name: "eawgrea"
+            hash: hash,
+            name: name
         }
         fetch('http://panel.jactc.xyz:3002/api/post/rsvp/', {
             method: 'POST',
