@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ngrok": "ngrok http 3000"
   },
   "dependencies": {
     "next": "13.5.4",
@@ -22,6 +23,7 @@
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
+    "ngrok": "^5.0.0-beta.2",
     "postcss": "^8",
     "standard": "^17.1.0",
     "tailwindcss": "^3",

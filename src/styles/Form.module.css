@@ -41,3 +41,14 @@
     background-color: azure;
 }
 
+.error {
+    background-color: rgb(139, 0, 0);
+    color: rgb(255, 131, 131);
+    padding: 30px;
+    width: 200px;
+}
+
+.closeButton {
+    font-size: 30px;
+    cursor: pointer;
+}
