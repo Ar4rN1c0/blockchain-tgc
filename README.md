@@ -81,7 +81,7 @@ So this is a Blockchain project, where are the transactions made? When you send 
 > [!NOTE] 
 > The `settings.url` must be provided to the `config.json` file!
 
-This API will take care of the transactions using your wallet, and has a DB where there are all the confirmed transactions. When we want to display whose fishtanks are free, we ask the API for the transactions completed with date from now to three days in the future. If there was a succesful transaction at one period, it means that it is reserverd.
+This API will take care of the transactions using your wallet, and has a DB where there are all the confirmed transactions. When we want to display whose fishtanks are free, we ask the API for the transactions completed with date from now to three days in the future. If there was a succesful transaction at one period, it means that it is r eserverd.
 
 **You can learn more about the API on its own repository [here](https://google.com)**
 
