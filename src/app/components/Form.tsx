@@ -42,7 +42,7 @@ export default function Form () {
             },
             mode: "cors"
         }).then(res => res.json())
-            .then(res => router.push(res.qr))
+            .then(res => console.log(res))
             .catch(err => console.error(err));
     }
 
