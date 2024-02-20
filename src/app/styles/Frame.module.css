@@ -1,0 +1,23 @@
+.frame {
+    width: 100vw;
+    height: 100dvh;
+    z-index: 100000;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.339);
+    place-content: center;
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+}
+
+.formArticle {
+    background: white;
+    width: 50vw;
+    height: 50dvh;
+    display: grid;
+    padding: 30px;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+}

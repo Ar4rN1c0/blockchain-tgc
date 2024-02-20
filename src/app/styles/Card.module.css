@@ -1,0 +1,41 @@
+.title {
+    margin: 0;
+    text-align: center;
+}
+
+.card {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    gap: 30px;
+}
+.image {
+    width: 275px;
+    height: 183px;  
+}
+
+.imgContainer {
+    display: grid;
+    place-content: center;
+}
+
+@media (width <= 500px) {
+    .card {
+        width: 60vw;
+        height: 22dvh;
+
+    }
+    .image {
+        width: 137.5px;
+        height: 92.5px;
+    }
+}

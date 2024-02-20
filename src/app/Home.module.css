@@ -1,0 +1,192 @@
+.mainSection {  
+    scroll-snap-align: center;
+    position: relative;
+    top: 17dvh;
+    background-color: aliceblue;
+    width: 100%;
+    height: 83dvh;
+    display: grid;
+    grid-template-columns: 1fr 0.01fr 1fr;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.title {
+    margin: 0;
+    color: #27696E;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.title + p {
+    color: #205559;
+    text-align: center;
+}
+
+.heroImage {
+    width: 1200px;
+    height: 712.5px;
+}
+
+.article {  
+    width: 50vw;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    animation: 1s fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.separator {
+    position: relative;
+    top: 5%;
+    width: 3px;
+    height: 90%;
+    background-color: #27696E;
+    border-radius: 2px;
+}
+
+.buttonDown {
+    position: absolute;
+    left: 50.48vw;
+    top: 73dvh;
+    width: 50px;
+    height: 50px;  
+    z-index: 100;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    animation: anim 2s;
+}
+
+@keyframes anim {
+    0% {
+        transform: scale(1.2);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.span {
+    position: relative;
+
+}
+.ideaSection {
+    width: 100%;
+    height: 83dvh;
+    position: relative;
+    top: 17dvh;
+    display: grid;
+    place-content: center;
+    background-image: url("../../public/Idea-Image.jpg");
+}
+
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    animation: subtitleAnim both;
+    animation-timeline: view();
+    animation-range: 0 50dvh;
+    user-select: none;
+}
+
+@keyframes subtitleAnim {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+.linkButton {
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px 0;
+    border-radius: 20px;
+    color: black;
+    animation: linksAnimation both;
+    animation-timeline: view();
+    animation-range: 0dvh 50dvh;
+    animation-delay: 1s;
+    transform: none;
+    box-shadow: none;
+    transition: all .3s
+}
+
+.linkButton:hover {
+    background-color: #205559;
+    transform: translateY(-5px);
+    color: white;
+    box-shadow: -11px 10px 18px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes linksAnimation {
+    from {
+        opacity: 0;
+    }
+    top {
+        opacity: 1;
+    }
+}
+
+.tokensSection {
+    position: relative;
+    top: 17dvh;
+
+}
+
+@media (width <= 500px) {
+    .mainSection {
+        grid-template-columns: 1fr;
+        place-content: center;
+        grid-template-rows: 1fr .1fr 1.4fr;
+        gap: 5px;
+    }
+    .article {
+        width: 100vw
+    }
+    .separator {
+        width: 70vw;
+        height: 3px;
+        left: 15vw;
+    }
+    .buttonDown {
+        left: 43vw;
+    }
+    .linkButton {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+

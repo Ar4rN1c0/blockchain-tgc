@@ -1,0 +1,112 @@
+.form {
+    width: 100vw;
+    height: 100dvh;
+    z-index: 100000;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.339);
+    place-content: center;
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+}
+
+.formArticle {
+    background: white;
+    width: 50vw;
+    height: 50dvh;
+    display: grid;
+    padding: 30px;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+}
+
+.formCont {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    place-content: center;
+    height: 40vh
+}
+
+.parrCont {
+    display: grid;
+    place-content: center;
+}
+
+.formCont > input {
+    width: 50%;
+    display: grid;
+    place-content: center;
+}
+
+.inputCont {
+    display: grid;
+    place-content: center;
+    gap: 10px;
+}
+
+.inputCont > input, .inputCont > button {
+    background-color: #27696E;
+    padding: 10px 20px;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: #1c4b4e;
+    transition: all .5s;
+}
+
+.inputCont > input {
+    background-color: #94bfc3;
+}
+
+.inputCont > button {
+    cursor: pointer;
+    transform: none;
+
+}
+.inputCont > button:hover {
+    transform: translateY(-3px);
+}
+
+
+.inputCont > input::placeholder {
+    color: white;
+}
+
+.inputCont > input:focus {
+    box-shadow: inset 5px #27696E;
+    inset: none;
+    background-color: white;
+    caret-color: black;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 1;
+    place-self: start right;
+    position: absolute;
+}
+
+.parr {
+    font-size: 30px;
+    text-align: center;
+    user-select: none;
+}
+
+@media(width <= 500px) {
+    .formArticle {
+        padding-top: 50px;
+        height: 40dvh;
+        width: 60vw;
+    }
+}
+
+@media(height <= 800px) {
+    .formArticle {
+        height: 60vh;
+        gap: 20px;
+    }
+}

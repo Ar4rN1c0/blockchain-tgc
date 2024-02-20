@@ -1,0 +1,28 @@
+.freeArticle {
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #007200;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.freeParr {
+    width: 200px;
+    height: 100px;
+    display: grid;
+    place-content: center;
+}
+
+.bookCont {
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #720000;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    user-select: none;
+}

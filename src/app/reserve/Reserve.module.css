@@ -1,0 +1,24 @@
+.section {
+    width: 100%;
+    height: 83dvh;
+    display: grid;
+    place-content: center center;
+    grid-template-columns: 1fr  1fr;
+    position: relative;
+    top: 17dvh;
+
+}
+
+.article {
+    display: grid;
+    place-content: center;
+
+}
+
+@media(width <= 500px) {
+    .section {
+        position: relative;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

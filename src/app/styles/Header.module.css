@@ -1,0 +1,45 @@
+.header {
+    width: 100vw;
+    height: 17dvh;
+    background-color: #27696E;
+    display: grid;
+    grid-template-columns: 1.9fr 1fr;
+    place-content: center center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.menu {
+    display: grid;
+    place-content: center;
+}
+
+.listMenu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    text-align: center;
+}
+
+.itemMenu {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0;
+}
+
+@media(width<=500px) {
+    .header {
+        grid-template-columns: 1fr;
+        padding: 5dvh 0;
+        height: 12dvh;
+    }
+    .menu {
+        padding: 0;
+    }
+    .link {
+        display: grid;
+        place-content: center;
+    }
+}
