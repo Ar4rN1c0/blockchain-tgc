@@ -33,21 +33,21 @@ export default async function Reserve({ params }: { params: Params }) {
             <Header></Header>
             <main className={styles.main}>
                 <section className={styles.listSection}>
-                    <h2>{today.toLocaleDateString()}</h2>
+                    <h2>{today.toLocaleDateString("en-GB")}</h2>
                     {freeToday.map((item: { isOcc: boolean; period: number; }, index: number) => (
-                        item.isOcc ? <Booked key={index}></Booked> : <Free date={today.toLocaleDateString()} key={index} period={item.period}></Free>
+                        item.isOcc ? <Booked key={index}></Booked> : <Free date={today.toLocaleDateString("en-GB")} key={index} period={item.period}></Free>
                     ))}
                 </section>
                 <section className={styles.listSection}>
-                    <h2>{tomorrow.toLocaleDateString()}</h2>
+                    <h2>{tomorrow.toLocaleDateString("en-GB")}</h2>
                     {freeTomorrow.map((item: { isOcc: boolean; period: number; }, index: number) => (
-                        item.isOcc ? <Booked key={index}></Booked> : <Free date={tomorrow.toLocaleDateString()} key={index} period={item.period}></Free>
+                        item.isOcc ? <Booked key={index}></Booked> : <Free date={tomorrow.toLocaleDateString("en-GB")} key={index} period={item.period}></Free>
                     ))}
                 </section>
                 <section className={styles.listSection}>
-                    <h2>{pastTomorrow.toLocaleDateString()}</h2>
+                    <h2>{pastTomorrow.toLocaleDateString("en-GB")}</h2>
                     {freePast.map((item: { isOcc: boolean; period: number; }, index: number) => (
-                        item.isOcc ? <Booked key={index}></Booked> : <Free date={pastTomorrow.toLocaleDateString()} key={index} period={item.period}></Free>
+                        item.isOcc ? <Booked key={index}></Booked> : <Free date={pastTomorrow.toLocaleDateString("en-GB")} key={index} period={item.period}></Free>
                     ))}
                 </section>
                 <section className={styles.form}>
