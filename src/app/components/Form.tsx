@@ -33,6 +33,7 @@ export default function Form () {
     function handleSubmit (e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setLoader(true);
+        console.log(data)
         fetch(`${settings.url}/api/post/checkout`, {
             method: "POST",
             body: JSON.stringify(data),
@@ -42,7 +43,7 @@ export default function Form () {
             },
             mode: "cors"
         }).then(res => res.json())
-            .then(res => console.log(res))
+            .then(res => router.push(res.qr))
             .catch(err => console.error(err));
     }
 
