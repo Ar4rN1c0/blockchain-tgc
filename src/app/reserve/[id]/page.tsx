@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import Header from "@/app/components/Header";
 import styles from "@/app/reserve/[id]/IDReserve.module.css";
 import Free from "@/app/components/Free";

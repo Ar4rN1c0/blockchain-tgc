@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+
 "use client";
 import { useGlobalContext } from "../Context/globalData";
 import Frame from "./Frame";

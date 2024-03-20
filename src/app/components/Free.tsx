@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+
 import styles from "@/app/styles/Free.module.css";
 import FreeFunc from "./FreeFunc";
 
