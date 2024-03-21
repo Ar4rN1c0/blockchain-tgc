@@ -5,7 +5,6 @@ import styles from "@/app/styles/Frame.module.css";
 import { animated, useSpring } from "@react-spring/web";
 
 
-
 export default function Frame () {
 
     const springs = useSpring({

@@ -14,7 +14,7 @@ export const GlobalContext = createContext<ContextProps>({
 });
 
 export const GlobalContextProvider = ({ children }: {children: ReactNode}) => {
-    const [showForm, setShowForm] = useState<boolean>(true);
+    const [showForm, setShowForm] = useState<boolean>(false);
     const [data, setData] = useState<DataType>({});
     const [showImage, setShowImage] = useState<boolean>(false);
 
